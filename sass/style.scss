@@ -1,3 +1,8 @@
+/* output:
+{
+    "sourceFiles": ["sass/style.scss"]
+}
+*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
 
 /* Variables */
@@ -92,12 +97,12 @@ i {
     font-size: medium;
 }
 
-p {
+.bloc_explorer p {
     padding: 5%;
     margin-top: 0;
 }
 
-h1 {
+.bloc_explorer h1 {
     margin-bottom: 0;
     margin-top: 10%;
 }
@@ -115,28 +120,46 @@ li {
 /* Choix filtres */
 #choix_filtres {
     ul {
-        padding: 0;
+        width: 95%;
+        padding-left: 0.7rem;
         list-style-type: none;
     }
 
     li {
         position: relative;
         border: none;
-        box-shadow: 4px 4px 2px lightgrey;
         background-color: #f6f6f6;
         border-radius: 30px 30px;
-        padding: 10%;
+        width: 100%;
+        height: 5em;
         text-align: center;
+        box-shadow: 0 4px 8px rgba(200, 200, 200, 1);
+        
 
-        i {
-            position: absolute;
-            left: 2rem;
-            top: 1.3rem;
+        .icône{
+
+            position: relative;
             font-size: 25px;
-            color: gray;
+            padding-top: 1em;
+      
+           
+          
+           i {
+            position: absolute;
+            left: 1.7em;
+          color: gray;
+          
+              &:hover {
+                color: $purple
+                ; 
+            }   
+         
+           }  
+     
         }
-
-        p {
+     
+       
+        span {
             position: absolute;
             border: none;
             border-radius: 50%;
@@ -144,19 +167,17 @@ li {
             font-size: smaller;
             background-color: $purple;
             color: white;
-            left: -1rem;
-            top: 1.5rem;
+            left: -0.7rem;
+            top: 1.8rem;
         }
 
-        &:hover {
-           
-            background-color: #f2eafb;
-        }
 
-        span {
-           
+        p {
+            position: relative;
             font-weight: bold;
-            margin-left: 2rem;
+            left: 1.5em;
+            top: -0.5em;
+            
             
         }
     }
@@ -176,7 +197,7 @@ li {
 
     .img_rest {
         width: 100%;
-        height: 130px;
+        height: 150px;
         border-radius: 20px 20px 0px 0px;
         object-fit: cover;
     }
@@ -187,6 +208,8 @@ li {
         box-shadow: 0 5px 5px 1px lightgray;
         border-radius: 20px;
         width: 100%;
+        margin-top: 7%;
+        
 
   
 
@@ -206,69 +229,133 @@ li {
 
     .bloc_rest {
         position: relative;
-        line-height: 0;
+        line-height: 0.5rem;
+        padding: 1%;
+        margin:3%;
+        width: 100%;
         
     }
-    .titre_rest{
-        margin: 4%;
-    }
- 
+
+.titre_rest{
+    margin-top: 0;
+}
+
+.coeur {
+    position: relative;
+    width: 100%;
+   
+}
 
         .coeur i {
             position: absolute;
             right: -2em;
-            top: 0em;
+            top: -1.5em;
             color: #686565;
             font-size: 2rem;
+            
+            
         }
 
         .coeur .plein {
+            position: absolute;
+            right: -2em;
+            top: -1.5em;
+            color: transparent;
+            font-size: 2rem;
+            background: linear-gradient(to top,
+              rgba(255, 121, 218, 0.8) 0%, 
+              rgba(255, 121, 218, 0.8) 10%, 
+              rgba(232, 110, 219, 0.8) 20%, 
+              rgba(207, 100, 220, 0.8) 40%, 
+              rgba(179, 92, 220, 0.8) 60%, 
+              rgba(147, 86, 220, 0.8) 80%, 
+              rgba(147, 86, 220, 0.8) 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: background-size 3s ease-in-out, opacity 3s ease-in-out;
+            background-size: 100% 0%;
             opacity: 0;
         }
-
+        
         .coeur:hover .plein {
+            cursor: pointer;
+            background-size: 100% 100%;
             opacity: 1;
         }
-
-        .coeur i:hover {
-            cursor: pointer;
-            background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            transition: 0.8s ease-in-out;
-        }
+        
+        
+        
+     
     }
 
-/* Section footer */
+    /* Section footer */
 .footer {
     width: 100%;
     background-color: #353535;
-    height: 250px;
-    padding-top: 10px;
-    margin-left: 0;
+    padding: 5%;
+    
+    
 
-    .liste {
-        list-style-type: none;
+    .footer_box {
+       padding: 2%;
+
     }
 
+    
+
     .title_footer {
-        margin-left: 40px;
+        margin: 0;
         font-family: 'Shrikhand';
         color: white;
         font-weight: lighter;
+        line-height: 0;
+        margin-top: 0.5rem;
     }
 
     .link {
+        display: flex;
         text-decoration: none;
         color: white;
-        line-height: 40px;
+        margin: 2rem;
+        
+        
     }
 
-    .liste i {
-        padding-right: 10px;
+    .link2
+    {
+        display: flex;
+        text-decoration: none;
         color: white;
+        margin: 0;
+
     }
+
+    .liste {
+        position: relative;
+        line-height: 0; 
+        list-style-type: none;
+        padding: 0;
+        .icône_menu { 
+            position: absolute;
+            top: -0.5rem;
+            left : 0.1em;
+             color: white;
+
+        }
+        .icône_main{
+            position: absolute;
+            top: 1.5rem;
+            left : 0.1em;
+             color: white;
+        }
+    }
+   
 }
+      
+      
+      
+      
+    
 
