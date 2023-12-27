@@ -132,13 +132,14 @@ li {
   font-size: 25px;
   padding-top: 1em;
 }
-#choix_filtres li .icône i {
+#choix_filtres li i {
   position: absolute;
-  left: 1.7em;
+  left: 1.5em;
   color: gray;
 }
-#choix_filtres li .icône i:hover {
+#choix_filtres li i:hover {
   color: #9356DC;
+  cursor: pointer;
 }
 #choix_filtres li span {
   position: absolute;
@@ -154,8 +155,9 @@ li {
 #choix_filtres li p {
   position: relative;
   font-weight: bold;
+  font-size: large;
   left: 1.5em;
-  top: -0.5em;
+  top: -0.7em;
 }
 
 /* Section restaurant */
@@ -206,25 +208,26 @@ li {
 .restaurant .coeur {
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 .restaurant .coeur i {
   position: absolute;
-  right: -2em;
+  right: -2.7em;
   top: -1.5em;
   color: #686565;
   font-size: 2rem;
 }
 .restaurant .coeur .plein {
   position: absolute;
-  right: -2em;
+  right: -2.7em;
   top: -1.5em;
   color: transparent;
   font-size: 2rem;
-  background: linear-gradient(to top, rgba(255, 121, 218, 0.8) 0%, rgba(255, 121, 218, 0.8) 10%, rgba(232, 110, 219, 0.8) 20%, rgba(207, 100, 220, 0.8) 40%, rgba(179, 92, 220, 0.8) 60%, rgba(147, 86, 220, 0.8) 80%, rgba(147, 86, 220, 0.8) 100%);
+  background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background-size 3s ease-in-out, opacity 3s ease-in-out;
+  transition: background-size 2s ease-in-out, opacity 2s ease-in-out;
   background-size: 100% 0%;
   opacity: 0;
 }
