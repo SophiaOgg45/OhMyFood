@@ -353,6 +353,31 @@ li {
 }
       
       
+  /* Desktop */
+
+@media screen and (min-width: 1024px) {
+   
+
+  
+    .contenair_rest1, .contenair_rest2 {
+        display: flex;
+        justify-content: center;
+    }
+  
+    .restaurant {
+        background-color: white;
+    }
+  
+    .title_rest {
+        margin-left: 20px;
+    }
+  
+    .type_rest {
+        margin: 20px;
+    }
+  }
+  
+
       
       
     
