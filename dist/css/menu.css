@@ -318,9 +318,6 @@ header i {
   transition: transform 100ms ease-in-out;
   opacity: 1;
 }
-#menu1 .bloc_dessert:hover .cross i {
-  animation: check 1s;
-}
 #menu1 .bloc_dessert:hover .titre h3 {
   width: 65%;
   white-space: nowrap;
